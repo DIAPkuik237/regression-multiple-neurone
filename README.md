@@ -25,8 +25,9 @@ b : biais (interception)
 📐 Méthode : résolution par les moindres carrés
 On utilise une formule matricielle pour résoudre ce système de manière rapide et fiable (utilisée aussi en Python) :
 θ=(X^TX) −1X^Ty
+
 ➕ Construction des matrices
-- Matrice X (avec biais ajouté sous forme de 1) :
+Matrice X (avec biais ajouté sous forme de 1) :
 
 A COMPLETER
 ​
