@@ -2,14 +2,13 @@
 
 Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
 
-🎯 Objectif
-
+## 🎯 Objectif
 Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres :
 
     ⏳ Temps d’étude (x1 = 4)
     😴 Temps de sommeil (x2 = 5)
 
-📊 Données
+## 📊 Données
 
 | Étudiant | Temps d'étude (x1) | Temps de sommeil (x2) | Score (y) |
 | -------- | ------------------ | --------------------- | --------- |
@@ -18,7 +17,7 @@ Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres
 | C        | 1                  | 8                     | 0.4       |
 | D        | 4                  | 5                     | ?         |
 
-🧮 Régression linéaire multiple
+## 🧮 Régression linéaire multiple
 
 On cherche une relation linéaire entre les variables d'entrée et le score :
 
@@ -31,7 +30,7 @@ y = a1*x1 + a2*x2 + b
     a1​,a2​ : poids appris
         b : biais (interception)
 
-📐 Méthode : moindres carrés (forme matricielle)
+## 📐 Méthode : moindres carrés (forme matricielle)
 
 On utilise une résolution matricielle, identique à celle utilisée en Python :
 y=X⋅θ
@@ -60,7 +59,7 @@ Ce qui donne :
     a2=0.1
     b=−0.5
 
-🔍 Prédiction pour l'étudiant D
+## 🔍 Prédiction pour l'étudiant D
 
 L’étudiant D a :
 
@@ -69,7 +68,7 @@ L’étudiant D a :
 
 yD=0.1⋅4+0.1⋅5−0.5=0.4
 
-🧠 Passage au neurone artificiel
+## 🧠 Passage au neurone artificiel
 
 On considère maintenant ce modèle comme un neurone simple :
 z=a1⋅x1+a2⋅x2+b
@@ -94,14 +93,14 @@ Tu peux prolonger ce projet :
     📈 En visualisant la sortie sigmoïde pour différentes entrées
     🧪 En comparant les résultats avec ou sans activation
 
-📌 Conclusion
+## 📌 Conclusion
 
 ✅ La régression multiple permet d’apprendre des poids optimaux pour combiner plusieurs variables.
 ✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité :➡️ C’est un neurone artificiel !
 
 🧠 Cette idée est la base du machine learning moderne et des réseaux de neurones.
 
-##💬 Et vous ?
+## 💬 Et vous ?
 
 Quelles autres variables pensez-vous qu'on pourrait inclure pour prédire la réussite d’un étudiant ?
 
