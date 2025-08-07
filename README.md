@@ -112,6 +112,8 @@ Quelles autres variables pensez-vous qu'on pourrait inclure pour prédire la ré
 💡 Comment ces données pourraient-elles être quantifiées et intégrées dans un modèle ?
 Partagez vos idées !
 
-📘 Par : Franck Kouekam  
-🌐 DIAP ∀ — Démystifier l’Intelligence Artificielle et Python pour tout le monde
 
+
+## 👨‍🔬 Projet réalisé par :
+📘 Par : Franck KOUEKAM – autodidacte en IA, fondateur de la chaîne [DIAP ∀](#)  
+🌐 DIAP ∀ — Démystifier l’Intelligence Artificielle et Python pour tout le monde
