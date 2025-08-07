@@ -115,5 +115,5 @@ Partagez vos idées !
 
 
 ## 👨‍🔬 Projet réalisé par :
-📘 Par : Franck KOUEKAM – autodidacte en IA, fondateur de la chaîne [DIAP ∀](#)  
+Franck KOUEKAM – autodidacte en IA, fondateur de la chaîne [DIAP ∀](#)  
 🌐 DIAP ∀ — Démystifier l’Intelligence Artificielle et Python pour tout le monde
