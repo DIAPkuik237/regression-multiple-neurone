@@ -1,5 +1,4 @@
-#Régression multiple & neurone artificiel
-
+Régression multiple & neurone artificiel
 Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
 🎯 Objectif
 
