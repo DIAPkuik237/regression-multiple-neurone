@@ -1,4 +1,4 @@
-###📘 Régression multiple & neurone artificiel
+#Régression multiple & neurone artificiel
 
 Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
 🎯 Objectif
@@ -64,7 +64,6 @@ Ce qui donne :
 L’étudiant D a :
 
     4 heures d’étude
-
     5 heures de sommeil
 
 yD=0.1⋅4+0.1⋅5−0.5=0.4
@@ -91,9 +90,7 @@ Application pour z=0.4:
 Tu peux prolonger ce projet :
 
     🔄 En testant d'autres étudiants (changer les x1​ et x2​)
-
     📈 En visualisant la sortie sigmoïde pour différentes entrées
-
     🧪 En comparant les résultats avec ou sans activation
 
 📌 Conclusion
