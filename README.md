@@ -1,4 +1,4 @@
-#📘 Régression multiple & neurone artificiel
+##📘 Régression multiple & neurone artificiel
 
 Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
 🎯 Objectif
@@ -105,7 +105,6 @@ Tu peux prolonger ce projet :
 🧠 Cette idée est la base du machine learning moderne et des réseaux de neurones.
 
 ##💬 Et vous ?
-## 💬 Et vous ?
 
 Quelles autres variables pensez-vous qu'on pourrait inclure pour prédire la réussite d’un étudiant ?
 
