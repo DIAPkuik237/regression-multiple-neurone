@@ -1,4 +1,4 @@
-📘 Régression multiple & neurone artificiel
+###📘 Régression multiple & neurone artificiel
 
 Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
 🎯 Objectif
@@ -6,7 +6,6 @@ Ce mini-projet pédagogique montre comment passer d'une régression linéaire mu
 Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres :
 
     ⏳ Temps d’étude (x1 = 4)
-
     😴 Temps de sommeil (x2 = 5)
 
 📊 Données
