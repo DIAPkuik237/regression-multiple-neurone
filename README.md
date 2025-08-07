@@ -62,15 +62,14 @@ Ce qui donne :
 ## 🔍 Prédiction pour l'étudiant D
 
 L’étudiant D a :
-
-    4 heures d’étude
-    5 heures de sommeil
+    4= heures d’étude
+    5= heures de sommeil
 
 yD=0.1⋅4+0.1⋅5−0.5=0.4
 
 ## 🧠 Passage au neurone artificiel
-
 On considère maintenant ce modèle comme un neurone simple :
+
 z=a1⋅x1+a2⋅x2+b
 
 Puis on applique une fonction d'activation pour transformer la sortie en probabilité.
