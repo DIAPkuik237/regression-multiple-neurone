@@ -37,14 +37,6 @@ Formule utilisée pour calculer les poids optimaux :
 
 θ = (Xᵀ * X)⁻¹ * Xᵀ * y
 
-En Python (avec NumPy) :
-
-```python
-theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
-
-✅ Résultat
-
-Poids appris par le modèle :
 
 
 
