@@ -1,142 +1,134 @@
-# Régression multiple & neurone artificiel
+# 🧠 Régression multiple & neurone artificiel
 
-Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
+Ce mini-projet pédagogique montre comment passer d'une **régression linéaire multiple** à un **neurone artificiel**, à l'aide d'un exemple simple basé sur les performances d'étudiants.
 
 ## 🎯 Objectif
+
 Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres :
 
-⏳ Temps d’étude (x1 = 4)
-😴 Temps de sommeil (x2 = 5)
+- ⏳ Temps d’étude (`x₁ = 4`)
+- 😴 Temps de sommeil (`x₂ = 5`)
 
-## 📊 Données
+## 🎯 Données utilisées
 
-| Étudiant | Temps d'étude (x1) | Temps de sommeil (x2) | Score (y) |
-| -------- | ------------------ | --------------------- | --------- |
-| A        | 2                  | 6                     | 0.3       |
-| B        | 3                  | 7                     | 0.5       |
-| C        | 1                  | 8                     | 0.4       |
-| D        | 4                  | 5                     | ?         |
+| Étudiant | Biais (1) | Étude (x₁) | Sommeil (x₂) | Score (y) |
+|----------|-----------|------------|--------------|-----------|
+| A        | 1         | 2          | 6            | 0.3       |
+| B        | 1         | 3          | 7            | 0.5       |
+| C        | 1         | 1          | 8            | 0.4       |
+
+> 🔎 La colonne `1` représente le **biais** (valeur constante permettant au modèle de s’ajuster même si toutes les entrées sont nulles).
 
 ## 🧮 Régression linéaire multiple
 
 On cherche une relation linéaire entre les variables d'entrée et le score :
 
-y = a1*x1 + a2*x2 + b
+\[
+y = a₁ \cdot x₁ + a₂ \cdot x₂ + b
+\]
 
-    x1 : temps d'étude
-    x2​ : temps de sommeil
-    y  : score
+Avec :
 
-    a1​,a2​ : poids appris
-        b : biais (interception)
+- `x₁` = temps d’étude  
 
-## 📐 Méthode : moindres carrés (forme matricielle)
+- `x₂` = temps de sommeil  
 
-On utilise une résolution matricielle, identique à celle utilisée en Python :
+- `a₁`, `a₂` = poids associés à chaque variable  
 
-y=X⋅θ
+- `b` = biais (valeur fixe à apprendre)
 
-avec :
+## 📐 Formule des moindres carrés
 
-## 🔢 Matrice des données (X)
+Pour calculer les poids optimaux (`a₁`, `a₂`, `b`), on utilise une résolution matricielle :
 
-| Étudiant | Biais (1) | Étude (x₁) | Sommeil (x₂) |
-|----------|-----------|------------|--------------|
-| A        | 1         | 2          | 6            |
-| B        | 1         | 3          | 7            |
-| C        | 1         | 1          | 8            |
+\[
+\theta = (X^T \cdot X)^{-1} \cdot X^T \cdot y
+\]
 
+En Python (avec NumPy) :
 
-## 🎯 Résultats observés (y)
-
-y = [0.3, 0.5, 0.4]
-
-| Étudiant | Score (y) |
-|----------|-----------|
-| A        | 0.3       |
-| B        | 0.5       |
-| C        | 0.4       |
-
-
-
-
-    🔎 La colonne de 1 sert à intégrer le biais (b).
-
-Formule des moindres carrés :
-theta(θ) = (X^T * X)^(-1) * X^T * y
-
-✅ Résultat (via calcul ou NumPy)
-
+```python
 theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
 
-Ce qui donne :
+✅ Poids appris par le modèle
 
-    a1=0.1
-    a2=0.1
-    b=−0.5
+Résultat du calcul :
 
-## 🔍 Prédiction pour l'étudiant D
+Poids appris (biais, étude, sommeil) : [-0.5  0.1  0.1]
+Soit :
+
+    a₁ = 0.1
+
+    a₂ = 0.1
+
+    b = -0.5
+
+Le modèle apprend ces poids automatiquement à partir des données, afin de minimiser l’erreur de prédiction (par la méthode des moindres carrés).
+
+👉 Pas besoin de les choisir à la main !
+
+🔍 Prédiction pour l’étudiant D
 
 L’étudiant D a :
-    4= heures d’étude
-    5= heures de sommeil
+
+    x₁ = 4 heures d’étude
+
+    x₂ = 5 heures de sommeil
+
+Calcul du score :
 
 yD=0.1⋅4+0.1⋅5−0.5=0.4
 
-## 🖼️ Visualisation 3D de la régression
+📊 Score prédit (avant activation) : 0.4
 
-Voici le plan de régression qui modélise l'influence combinée du sommeil et du temps d'étude :
+🖼️ Visualisation 3D de la régression
+
+Voici le plan de régression 3D qui montre l’influence conjointe du sommeil et de l’étude sur le score :
 
 ![Heatmap](https://github.com/DIAPkuik237/regression-multiple-neurone/blob/master/heatmap(2).png)
 
-## 🧠 Passage au neurone artificiel
-On considère maintenant ce modèle comme un neurone simple :
+🧠 Passage au neurone artificiel
+
+Reprenons la formule obtenue :
 
 z=a1⋅x1+a2⋅x2+b
 
-Puis on applique une fonction d'activation pour transformer la sortie en probabilité.
+Pour en faire un neurone artificiel, on ajoute une fonction d’activation. Ici, on utilise la fonction sigmoïde :
 
-✅ Fonction d’activation sigmoïde :
+La fonction sigmoïde σ(z) est définie par :
 
 σ(z) = 1 / (1 + e^(-z))
 
-Application pour z=0.4:
 
-σ(0.4) = 1 / (1 + e^(-0.4)) ≈ 0.5987
+🔮 Probabilité de réussite (après sigmoïde) : 0.5987
 
-👉 Ce résultat peut être interprété comme une probabilité de réussite de 59.87 % pour l’étudiant D.
+✅ Ce résultat peut être interprété comme une probabilité de succès de ~59.87% pour l’étudiant D.
 
-🧠 Et maintenant ?
+🧩 Ce que ça nous apprend
 
-Tu peux prolonger ce projet :
+    ✅ La régression multiple combine plusieurs variables via une somme pondérée.
 
-    🔄 En testant d'autres étudiants (changer les x1​ et x2​)
-    📈 En visualisant la sortie sigmoïde pour différentes entrées
-    🧪 En comparant les résultats avec ou sans activation
+    ✅ Le modèle apprend automatiquement les meilleurs poids à partir des données.
 
-## 📌 Conclusion
+    ✅ En ajoutant une fonction d’activation (sigmoïde), on crée un neurone simple.
 
-✅ La régression multiple permet d’apprendre des poids optimaux pour combiner plusieurs variables.
+    🚀 Cette idée est la base du machine learning et des réseaux de neurones.
 
-✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité :➡️ C’est un neurone artificiel !
+🔗 Ressources
 
-🧠 Cette idée est la base du machine learning moderne et des réseaux de neurones.
+    🔗 Article complet sur Medium
 
-## 💬 Et vous ?
+    💻 Code source sur GitHub
 
-Quelles autres variables pensez-vous qu'on pourrait inclure pour prédire la réussite d’un étudiant ?
+    🧪 Exécuter sur Google Colab
 
-📌 Par exemple :
-- Le niveau de stress ?
-- La motivation personnelle ?
-- La qualité de l'alimentation ?
-- L'environnement familial ?
+    📘 Lire d'abord : Un premier pas vers l’IA avec la régression linéaire simple
 
-💡 Comment ces données pourraient-elles être quantifiées et intégrées dans un modèle ?
-Partagez vos idées !
+👨‍🔬 Réalisé par
+
+Franck KOUEKAM – autodidacte en IA & vulgarisateur
+
+📺 Chaîne DIAP ∀ — Démystifier l’Intelligence Artificielle & Python pour tout le monde
 
 
 
-## 👨‍🔬 Projet réalisé par :
-Franck KOUEKAM – autodidacte en IA, fondateur de la chaîne [DIAP ∀](#)  
-🌐 DIAP ∀ — Démystifier l’Intelligence Artificielle et Python pour tout le monde
