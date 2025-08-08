@@ -5,6 +5,6 @@ Objectif
 
 Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres :
 
-    Temps d’étude (x₁ = 4)
+Temps d’étude (x₁ = 4)
 
-    Temps de sommeil (x₂ = 5)
+Temps de sommeil (x₂ = 5)
