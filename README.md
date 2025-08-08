@@ -47,7 +47,36 @@ Formule utilisée pour calculer les poids optimaux :
 
 
 
+🧩 Ce que ça nous apprend
 
+✅ La régression multiple permet :
+
+    d’apprendre automatiquement les poids à partir des données
+
+    de combiner plusieurs variables pour faire une prédiction
+
+    de transformer le modèle en neurone artificiel via une fonction d’activation
+
+🚀 C’est l’un des fondements du machine learning moderne !
+💬 Et vous ?
+
+Quelles autres variables pourrait-on intégrer pour prédire la réussite d’un étudiant ?
+
+📌 Par exemple :
+
+    Le niveau de stress ?
+
+    La motivation personnelle ?
+
+    La qualité de l'alimentation ?
+
+    L'environnement familial ?
+
+💡 Et vous, quelles idées auriez-vous pour enrichir ce modèle ?
+👨‍🔬 Réalisé par
+
+Franck KOUEKAM — autodidacte en IA & vulgarisateur
+📺 Chaîne YouTube : DIAP ∀ — Démystifier l’IA & Python pour tout le monde
 
 
 
