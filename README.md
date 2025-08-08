@@ -53,15 +53,21 @@ theta = (Xᵗ * X)^(-1) * Xᵗ * y
 ## 🔢 Données sous forme matricielle
 ### Matrice X (avec biais)
 
-X = [
-[1, 2, 6], # Étudiant A
-[1, 3, 7], # Étudiant B
-[1, 1, 8] # Étudiant C
-]
+| Biais | Étude (x₁) | Sommeil (x₂) |
+| ----- | ---------- | ------------ |
+| 1     | 2          | 6            |
+| 1     | 3          | 7            |
+| 1     | 1          | 8            |
+
 
 
 ### Vecteur y
-y = [0.3, 0.5, 0.4]
+| Étudiant | Score (y) |
+| -------- | --------- |
+| A        | 0.3       |
+| B        | 0.5       |
+| C        | 0.4       |
+
 
 
 ---
