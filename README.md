@@ -45,9 +45,19 @@ Résultat obtenu :
 
 Poids appris : [b, a1, a2] = [-0.5, 0.1, 0.1]
 
+Calcul des coefficients par la méthode des moindres carrés :
 
+🔍 Prédiction pour l'étudiant D
 
+Étudiant D :
 
+    x₁ = 4 (étude)
+
+    x₂ = 5 (sommeil)
+
+Calcul du score :
+
+yD = 0.1 * 4 + 0.1 * 5 - 0.5 = 0.4
 
 
 
