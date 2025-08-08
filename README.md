@@ -82,10 +82,8 @@ b = -0.5
 ## 🔍 Prédiction pour l’étudiant D
 
 L’étudiant D a :
-
-    x1 = 4
-
-    x2 = 5
+x1 = 4
+x2 = 5
 
 Calcul :
 
