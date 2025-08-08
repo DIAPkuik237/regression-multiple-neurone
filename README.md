@@ -19,3 +19,19 @@ Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres
 | B        | 3                  | 7                      | 0.5       |
 | C        | 1                  | 8                      | 0.4       |
 | D        | 4                  | 5                      | ?         |
+
+y = a₁ * x₁ + a₂ * x₂ + b
+
+Avec :
+
+- `x₁` : temps d'étude  
+- `x₂` : temps de sommeil  
+- `a₁`, `a₂` : poids associés à chaque variable  
+- `b` : biais
+
+---
+
+## 📐 Méthode : moindres carrés (forme matricielle)
+
+Formule utilisée pour calculer les poids optimaux :
+
