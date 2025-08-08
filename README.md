@@ -29,4 +29,21 @@ Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres
 ## 🧮 Régression linéaire multiple
 
 On cherche une relation du type :
+y = a1 * x1 + a2 * x2 + b
+
+Avec :
+
+- `x1` : temps d'étude  
+- `x2` : temps de sommeil  
+- `a1`, `a2` : poids appris pour chaque variable  
+- `b` : biais (interception)
+
+---
+
+## 📐 Méthode des moindres carrés
+
+### Forme matricielle
+
+Formule utilisée :
+
 
