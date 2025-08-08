@@ -67,6 +67,12 @@ L’étudiant D a :
 
 yD=0.1⋅4+0.1⋅5−0.5=0.4
 
+## 🖼️ Visualisation 3D de la régression
+
+Voici le plan de régression qui modélise l'influence combinée du sommeil et du temps d'étude :
+
+![Plan 3D](https://github.com/DIAPkuik237/regression-multiple-neurone/raw/master/heatmap.png)
+
 ## 🧠 Passage au neurone artificiel
 On considère maintenant ce modèle comme un neurone simple :
 
