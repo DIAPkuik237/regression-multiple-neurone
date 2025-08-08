@@ -66,21 +66,8 @@ y = [0.3, 0.5, 0.4]
 
 ---
 
-## 🧪 Implémentation en Python
-
-```python
-import numpy as np
-
-X = np.array([
-    [1, 2, 6],
-    [1, 3, 7],
-    [1, 1, 8]
-])
-
-y = np.array([0.3, 0.5, 0.4])
-
-theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
-print(theta_best)
+✅ Résultat obtenu
+Poids appris par le modèle (dans l’ordre : biais, x1, x2) :
 
 
 
