@@ -45,5 +45,30 @@ Avec :
 ### Forme matricielle
 
 Formule utilisée :
+theta = (Xᵗ * X)^(-1) * Xᵗ * y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
