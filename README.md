@@ -22,3 +22,13 @@ La colonne de biais (1) permet d'ajouter une constante dans le modèle (le biais
 ## Régression linéaire multiple
 
 On cherche une relation linéaire entre les variables d’entrée et le score :
+
+y = a₁ * x₁ + a₂ * x₂ + b
+- x₁ : temps d’étude
+- x₂ : temps de sommeil
+- a₁, a₂ : poids (coefficients)
+- b : biais (interception)
+
+## Formule des moindres carrés
+
+Pour calculer les poids optimaux, on utilise la méthode des moindres carrés sous forme matricielle :
