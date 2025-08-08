@@ -48,7 +48,20 @@ Formule utilisée :
 theta = (Xᵗ * X)^(-1) * Xᵗ * y
 
 
+---
 
+## 🔢 Données sous forme matricielle
+### Matrice X (avec biais)
+
+X = [
+[1, 2, 6], # Étudiant A
+[1, 3, 7], # Étudiant B
+[1, 1, 8] # Étudiant C
+]
+
+
+### Vecteur y
+y = [0.3, 0.5, 0.4]
 
 
 
