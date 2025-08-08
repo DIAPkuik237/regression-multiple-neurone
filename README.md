@@ -79,16 +79,68 @@ a2 = 0.1
 
 b = -0.5
 
+## 🔍 Prédiction pour l’étudiant D
+
+L’étudiant D a :
+
+    x1 = 4
+
+    x2 = 5
+
+Calcul :
+
+yD = 0.1 * 4 + 0.1 * 5 - 0.5 = 0.4
+
+## 🧠 Passage au neurone artificiel
+
+Formule de sortie du neurone :
+
+z = a1 * x1 + a2 * x2 + b
+
+Puis, on applique une fonction d’activation.
+Fonction sigmoïde :
+
+σ(z) = 1 / (1 + e^(-z))
+
+Application pour z = 0.4 :
+
+σ(0.4) ≈ 0.5987
+
+#### ✅ Interprétation :
+
+Probabilité de réussite de l’étudiant D : ~59.87 %
+
+## 🖼️ Visualisation
+
+Visualisation 3D de la régression :
 
 
+## 📌 Conclusion
 
+    ✅ La régression multiple apprend automatiquement les poids optimaux pour combiner plusieurs variables.
 
+    ✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité → on obtient un neurone artificiel simple.
 
+    🧠 C’est le principe fondamental derrière les réseaux de neurones et le machine learning moderne.
 
+## 💬 Et vous ?
 
+Quelles autres variables pourraient influencer la réussite d’un étudiant ?
 
+    Le niveau de stress ?
 
+    La motivation personnelle ?
 
+    La qualité de l’alimentation ?
+
+    L’environnement familial ?
+
+💡 Et si vous intégriez ces paramètres dans un futur modèle ?
+
+### 👨‍🔬 Projet réalisé par
+
+Franck KOUEKAM — Autodidacte en IA & vulgarisateur
+Chaîne YouTube : DIAP ∀ — Démystifier l’IA & Python pour tout le monde
 
 
 
