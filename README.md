@@ -66,7 +66,7 @@ y = [0.3, 0.5, 0.4]
 
 ---
 
-### ✅ Résultat obtenu
+#### ✅ Résultat obtenu
 Poids appris par le modèle (dans l’ordre : biais, x1, x2) :
 
 
