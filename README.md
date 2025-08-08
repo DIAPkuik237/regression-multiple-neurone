@@ -42,8 +42,6 @@ Avec :
 
 ## 📐 Méthode des moindres carrés
 
-### Forme matricielle
-
 Formule utilisée :
 theta = (Xᵗ * X)^(-1) * Xᵗ * y
 
@@ -72,10 +70,26 @@ theta = (Xᵗ * X)^(-1) * Xᵗ * y
 
 ---
 
+## 💻 Implémentation en Python
+import numpy as np
+
+X = np.array([
+    [1, 2, 6],  # Étudiant A
+    [1, 3, 7],  # Étudiant B
+    [1, 1, 8]   # Étudiant C
+])
+
+y = np.array([0.3, 0.5, 0.4])
+
+theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
+print(theta_best)
+
+
+
 #### ✅ Résultat obtenu
 Poids appris par le modèle (dans l’ordre : biais, x1, x2) :
 
--0.5 0.1 0.1
+[-0.5  0.1  0.1]
 
 Soit :
 
@@ -97,6 +111,12 @@ Calcul :
 
 yD = 0.1 * 4 + 0.1 * 5 - 0.5 = 0.4
 
+## 🖼️ Visualisation 3D de la régression
+
+Voici le plan de régression qui modélise l'influence combinée du sommeil et du temps d'étude :
+![Heatmap](https://github.com/DIAPkuik237/regression-multiple-neurone/blob/master/heatmap(2).png)
+
+
 ## 🧠 Passage au neurone artificiel
 
 Formule de sortie du neurone :
@@ -115,10 +135,6 @@ Application pour z = 0.4 :
 #### ✅ Interprétation :
 
 Probabilité de réussite de l’étudiant D : ~59.87 %
-
-## 🖼️ Visualisation
-
-Visualisation 3D de la régression :
 
 
 ## 📌 Conclusion
