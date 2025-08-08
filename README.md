@@ -33,7 +33,9 @@ y = a1*x1 + a2*x2 + b
 ## 📐 Méthode : moindres carrés (forme matricielle)
 
 On utilise une résolution matricielle, identique à celle utilisée en Python :
+
 y=X⋅θ
+
 avec :
 
 X = [
