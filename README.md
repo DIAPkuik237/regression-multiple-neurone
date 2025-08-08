@@ -1,109 +1,140 @@
-# 📘 Régression multiple & neurone artificiel
+#📘 Régression multiple & neurone artificiel
 
-Ce mini-projet pédagogique montre comment passer d'une **régression linéaire multiple** à un **neurone artificiel**, à l'aide d'un exemple simple basé sur les performances d'étudiants.
-
-## 🎯 Objectif
+Ce mini-projet pédagogique montre comment passer d'une régression linéaire multiple à un neurone artificiel, à l'aide d'un exemple simple basé sur les performances d'étudiants.
+🎯 Objectif
 
 Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres :
 
-- ⏳ Temps d’étude (`x₁ = 4`)
-- 😴 Temps de sommeil (`x₂ = 5`)
+    ⏳ Temps d’étude (x1 = 4)
 
----
+    😴 Temps de sommeil (x2 = 5)
 
-## 📊 Données
+📊 Données
 
-| Étudiant | Temps d'étude (x₁) | Temps de sommeil (x₂) | Score (y) |
-| -------- | ------------------ | ---------------------- | --------- |
-| A        | 2                  | 6                      | 0.3       |
-| B        | 3                  | 7                      | 0.5       |
-| C        | 1                  | 8                      | 0.4       |
-| D        | 4                  | 5                      | ?         |
+| Étudiant | Temps d'étude (x1) | Temps de sommeil (x2) | Score (y) |
+| -------- | ------------------ | --------------------- | --------- |
+| A        | 2                  | 6                     | 0.3       |
+| B        | 3                  | 7                     | 0.5       |
+| C        | 1                  | 8                     | 0.4       |
+| D        | 4                  | 5                     | ?         |
 
-y = a₁ * x₁ + a₂ * x₂ + b
+🧮 Régression linéaire multiple
 
-Avec :
+On cherche une relation linéaire entre les variables d'entrée et le score :
 
-- `x₁` : temps d'étude  
-- `x₂` : temps de sommeil  
-- `a₁`, `a₂` : poids associés à chaque variable  
-- `b` : biais
+y = a1*x1 + a2*x2 + b
 
----
+    x1 : temps d'étude
+    x2​ : temps de sommeil
+    y  : score
 
-## 📐 Méthode : moindres carrés (forme matricielle)
+    a1​,a2​ : poids appris
+        b : biais (interception)
 
-Formule utilisée pour calculer les poids optimaux :
+📐 Méthode : moindres carrés (forme matricielle)
 
-θ = (Xᵀ * X)⁻¹ * Xᵀ * y
+On utilise une résolution matricielle, identique à celle utilisée en Python :
+y=X⋅θ
+avec :
 
-Calcul des coefficients par la méthode des moindres carrés :
+X = [
+  [1, 2, 6],   # Étudiant A
+  [1, 3, 7],   # Étudiant B
+  [1, 1, 8]    # Étudiant C
+]
+
+y = [0.3, 0.5, 0.4]
+
+    🔎 La colonne de 1 sert à intégrer le biais (b).
+
+Formule des moindres carrés :
+theta(θ) = (X^T * X)^(-1) * X^T * y
+
+✅ Résultat (via calcul ou NumPy)
 
 theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
 
-Résultat obtenu :
+Ce qui donne :
 
-Poids appris : [b, a1, a2] = [-0.5, 0.1, 0.1]
-
-Calcul des coefficients par la méthode des moindres carrés :
+    a1=0.1
+    a2=0.1
+    b=−0.5
 
 🔍 Prédiction pour l'étudiant D
 
-Étudiant D :
+L’étudiant D a :
 
-    x₁ = 4 (étude)
+    4 heures d’étude
 
-    x₂ = 5 (sommeil)
+    5 heures de sommeil
 
-Calcul du score :
+yD=0.1⋅4+0.1⋅5−0.5=0.4
 
-yD = 0.1 * 4 + 0.1 * 5 - 0.5 = 0.4
+🧠 Passage au neurone artificiel
 
+On considère maintenant ce modèle comme un neurone simple :
+z=a1⋅x1+a2⋅x2+b
 
+Puis on applique une fonction d'activation pour transformer la sortie en probabilité.
 
+✅ Fonction d’activation sigmoïde :
 
+σ(z) = 1 / (1 + e^(-z))
 
+Application pour z=0.4:
 
+σ(0.4) = 1 / (1 + e^(-0.4)) ≈ 0.5987
 
+👉 Ce résultat peut être interprété comme une probabilité de réussite de 59.87 % pour l’étudiant D.
 
+🧠 Et maintenant ?
 
+Tu peux prolonger ce projet :
 
-🖼️ Visualisation 3D de la régression
+    🔄 En testant d'autres étudiants (changer les x1​ et x2​)
 
-Voici une représentation du plan de régression :
+    📈 En visualisant la sortie sigmoïde pour différentes entrées
 
+    🧪 En comparant les résultats avec ou sans activation
 
+📌 Conclusion
 
-🧩 Ce que ça nous apprend
+✅ La régression multiple permet d’apprendre des poids optimaux pour combiner plusieurs variables.
+✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité :➡️ C’est un neurone artificiel !
 
-✅ La régression multiple permet :
+🧠 Cette idée est la base du machine learning moderne et des réseaux de neurones.
 
-    d’apprendre automatiquement les poids à partir des données
+##💬 Et vous ?
+## 💬 Et vous ?
 
-    de combiner plusieurs variables pour faire une prédiction
-
-    de transformer le modèle en neurone artificiel via une fonction d’activation
-
-🚀 C’est l’un des fondements du machine learning moderne !
-💬 Et vous ?
-
-Quelles autres variables pourrait-on intégrer pour prédire la réussite d’un étudiant ?
+Quelles autres variables pensez-vous qu'on pourrait inclure pour prédire la réussite d’un étudiant ?
 
 📌 Par exemple :
+- Le niveau de stress ?
+- La motivation personnelle ?
+- La qualité de l'alimentation ?
+- L'environnement familial ?
 
-    Le niveau de stress ?
+💡 Comment ces données pourraient-elles être quantifiées et intégrées dans un modèle ?
+Partagez vos idées !
 
-    La motivation personnelle ?
 
-    La qualité de l'alimentation ?
+📘 Par : Franck Kouekam  
+🌐 DIAP ∀ — Démystifier l’Intelligence Artificielle et Python pour tout le monde
 
-    L'environnement familial ?
 
-💡 Et vous, quelles idées auriez-vous pour enrichir ce modèle ?
-👨‍🔬 Réalisé par
 
-Franck KOUEKAM — autodidacte en IA & vulgarisateur
-📺 Chaîne YouTube : DIAP ∀ — Démystifier l’IA & Python pour tout le monde
+
+
+
+
+
+
+
+
+
+
+
 
 
 
