@@ -68,11 +68,15 @@ y = [0.3, 0.5, 0.4]
 
 #### ✅ Résultat obtenu
 Poids appris par le modèle (dans l’ordre : biais, x1, x2) :
+
 -0.5 0.1 0.1
+
 Soit :
 
 a1 = 0.1
+
 a2 = 0.1
+
 b = -0.5
 
 
