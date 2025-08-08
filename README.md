@@ -48,3 +48,13 @@ y = np.array([0.3, 0.5, 0.4])
 
 theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
 print(theta_best)
+### Résultat obtenu
+
+
+
+
+
+
+
+
+
