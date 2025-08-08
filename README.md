@@ -32,3 +32,19 @@ y = a₁ * x₁ + a₂ * x₂ + b
 ## Formule des moindres carrés
 
 Pour calculer les poids optimaux, on utilise la méthode des moindres carrés sous forme matricielle :
+θ = (Xᵀ * X)⁻¹ * Xᵀ * y
+## Implémentation en Python
+
+```python
+import numpy as np
+
+X = np.array([
+    [1, 2, 6],  # Étudiant A
+    [1, 3, 7],  # Étudiant B
+    [1, 1, 8]   # Étudiant C
+])
+
+y = np.array([0.3, 0.5, 0.4])
+
+theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
+print(theta_best)
