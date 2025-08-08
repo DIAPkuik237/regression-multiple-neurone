@@ -37,6 +37,13 @@ Formule utilisée pour calculer les poids optimaux :
 
 θ = (Xᵀ * X)⁻¹ * Xᵀ * y
 
+Calcul des coefficients par la méthode des moindres carrés :
+
+theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
+
+Résultat obtenu :
+
+Poids appris : [b, a1, a2] = [-0.5, 0.1, 0.1]
 
 
 
@@ -44,6 +51,16 @@ Formule utilisée pour calculer les poids optimaux :
 
 
 
+
+
+
+
+
+
+
+🖼️ Visualisation 3D de la régression
+
+Voici une représentation du plan de régression :
 
 
 
