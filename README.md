@@ -95,6 +95,7 @@ Tu peux prolonger ce projet :
 ## 📌 Conclusion
 
 ✅ La régression multiple permet d’apprendre des poids optimaux pour combiner plusieurs variables.
+
 ✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité :➡️ C’est un neurone artificiel !
 
 🧠 Cette idée est la base du machine learning moderne et des réseaux de neurones.
