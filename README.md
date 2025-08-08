@@ -5,8 +5,8 @@ Ce mini-projet pédagogique montre comment passer d'une régression linéaire mu
 ## 🎯 Objectif
 Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres :
 
-    ⏳ Temps d’étude (x1 = 4)
-    😴 Temps de sommeil (x2 = 5)
+⏳ Temps d’étude (x1 = 4)
+😴 Temps de sommeil (x2 = 5)
 
 ## 📊 Données
 
