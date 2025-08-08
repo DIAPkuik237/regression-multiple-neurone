@@ -40,7 +40,6 @@ Formule utilisée pour calculer les poids optimaux :
 En Python (avec NumPy) :
 
 ```python
-
 theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
 
 
