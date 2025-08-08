@@ -48,87 +48,88 @@ Pour calculer les poids optimaux (`a₁`, `a₂`, `b`), on utilise une résoluti
 En Python (avec NumPy) :
 
 ```python
+
 theta_best = np.linalg.inv(X.T @ X) @ X.T @ y
 
-✅ Poids appris par le modèle
+==> Poids appris par le modèle :
 
 Résultat du calcul :
 
 Poids appris (biais, étude, sommeil) : [-0.5  0.1  0.1]
+
 Soit :
+    a1 = 0.1
+    a2 = 0.1
+    b  = -0.5
 
-    a₁ = 0.1
+Le modèle apprend ces poids automatiquement à partir des données,
+afin de minimiser l’erreur de prédiction (par la méthode des moindres carrés).
 
-    a₂ = 0.1
+=> Pas besoin de les choisir à la main !
 
-    b = -0.5
+------------------------------------------------------------
 
-Le modèle apprend ces poids automatiquement à partir des données, afin de minimiser l’erreur de prédiction (par la méthode des moindres carrés).
-
-👉 Pas besoin de les choisir à la main !
-
-🔍 Prédiction pour l’étudiant D
+Prédiction pour l’étudiant D
 
 L’étudiant D a :
-
-    x₁ = 4 heures d’étude
-
-    x₂ = 5 heures de sommeil
+    x1 = 4 heures d’étude
+    x2 = 5 heures de sommeil
 
 Calcul du score :
+    yD = 0.1 * 4 + 0.1 * 5 - 0.5 = 0.4
 
-yD=0.1⋅4+0.1⋅5−0.5=0.4
+Score prédit (avant activation) : 0.4
 
-📊 Score prédit (avant activation) : 0.4
+------------------------------------------------------------
 
-🖼️ Visualisation 3D de la régression
+Visualisation 3D de la régression
 
 Voici le plan de régression 3D qui montre l’influence conjointe du sommeil et de l’étude sur le score :
 
-![Heatmap](https://github.com/DIAPkuik237/regression-multiple-neurone/blob/master/heatmap(2).png)
+Image (Heatmap) : https://github.com/DIAPkuik237/regression-multiple-neurone/blob/master/heatmap(2).png
 
-🧠 Passage au neurone artificiel
+------------------------------------------------------------
 
-Reprenons la formule obtenue :
+Passage au neurone artificiel
 
-z=a1⋅x1+a2⋅x2+b
+On reprend la formule obtenue :
+    z = a1 * x1 + a2 * x2 + b
 
-Pour en faire un neurone artificiel, on ajoute une fonction d’activation. Ici, on utilise la fonction sigmoïde :
+Puis on applique une fonction d’activation. Ici : la fonction sigmoïde
 
-La fonction sigmoïde σ(z) est définie par :
+Définition :
+    sigma(z) = 1 / (1 + e^(-z))
 
-σ(z) = 1 / (1 + e^(-z))
+Application pour z = 0.4 :
+    sigma(0.4) ≈ 0.5987
 
+Interprétation :
+    Probabilité de réussite : environ 59.87 %
 
-🔮 Probabilité de réussite (après sigmoïde) : 0.5987
+------------------------------------------------------------
 
-✅ Ce résultat peut être interprété comme une probabilité de succès de ~59.87% pour l’étudiant D.
+Ce que ça nous apprend :
 
-🧩 Ce que ça nous apprend
+    - La régression multiple combine plusieurs variables via une somme pondérée.
+    - Le modèle apprend automatiquement les meilleurs poids à partir des données.
+    - En ajoutant une fonction d’activation (sigmoïde), on crée un neurone simple.
+    - Cette idée est la base du machine learning et des réseaux de neurones.
 
-    ✅ La régression multiple combine plusieurs variables via une somme pondérée.
+------------------------------------------------------------
 
-    ✅ Le modèle apprend automatiquement les meilleurs poids à partir des données.
+Ressources :
 
-    ✅ En ajoutant une fonction d’activation (sigmoïde), on crée un neurone simple.
+    - Article complet sur Medium
+    - Code source sur GitHub : https://github.com/DIAPkuik237/regression-multiple-neurone
+    - Exécuter sur Google Colab
+    - Lire d'abord : Un premier pas vers l’IA avec la régression linéaire simple
 
-    🚀 Cette idée est la base du machine learning et des réseaux de neurones.
+------------------------------------------------------------
 
-🔗 Ressources
-
-    🔗 Article complet sur Medium
-
-    💻 Code source sur GitHub
-
-    🧪 Exécuter sur Google Colab
-
-    📘 Lire d'abord : Un premier pas vers l’IA avec la régression linéaire simple
-
-👨‍🔬 Réalisé par
+Projet réalisé par :
 
 Franck KOUEKAM – autodidacte en IA & vulgarisateur
 
-📺 Chaîne DIAP ∀ — Démystifier l’Intelligence Artificielle & Python pour tout le monde
-
+Chaîne YouTube : DIAP ∀ — Démystifier l’Intelligence Artificielle & Python pour tout le monde
 
 
