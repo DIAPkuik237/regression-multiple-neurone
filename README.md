@@ -38,13 +38,27 @@ y=X⋅θ
 
 avec :
 
-X = [
-  [1, 2, 6],   # Étudiant A
-  [1, 3, 7],   # Étudiant B
-  [1, 1, 8]    # Étudiant C
-]
+## 🔢 Matrice des données (X)
+
+| Étudiant | Biais (1) | Étude (x₁) | Sommeil (x₂) |
+|----------|-----------|------------|--------------|
+| A        | 1         | 2          | 6            |
+| B        | 1         | 3          | 7            |
+| C        | 1         | 1          | 8            |
+
+
+## 🎯 Résultats observés (y)
 
 y = [0.3, 0.5, 0.4]
+
+| Étudiant | Score (y) |
+|----------|-----------|
+| A        | 0.3       |
+| B        | 0.5       |
+| C        | 0.4       |
+
+
+
 
     🔎 La colonne de 1 sert à intégrer le biais (b).
 
