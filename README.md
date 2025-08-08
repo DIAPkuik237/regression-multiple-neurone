@@ -82,7 +82,9 @@ b = -0.5
 ## 🔍 Prédiction pour l’étudiant D
 
 L’étudiant D a :
+
 x1 = 4
+
 x2 = 5
 
 Calcul :
@@ -115,9 +117,9 @@ Visualisation 3D de la régression :
 
 ## 📌 Conclusion
 
-    ✅ La régression multiple apprend automatiquement les poids optimaux pour combiner plusieurs variables.
+✅ La régression multiple apprend automatiquement les poids optimaux pour combiner plusieurs variables.
 
-    ✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité → on obtient un neurone artificiel simple.
+✅ En ajoutant une fonction d’activation, on transforme la sortie en probabilité → on obtient un neurone artificiel simple.
 
     🧠 C’est le principe fondamental derrière les réseaux de neurones et le machine learning moderne.
 
@@ -125,13 +127,13 @@ Visualisation 3D de la régression :
 
 Quelles autres variables pourraient influencer la réussite d’un étudiant ?
 
-    Le niveau de stress ?
+Le niveau de stress ?
 
-    La motivation personnelle ?
+La motivation personnelle ?
 
-    La qualité de l’alimentation ?
+La qualité de l’alimentation ?
 
-    L’environnement familial ?
+L’environnement familial ?
 
 💡 Et si vous intégriez ces paramètres dans un futur modèle ?
 
