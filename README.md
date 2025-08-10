@@ -22,7 +22,7 @@ Prédire le score d’un étudiant (étudiant D) en fonction de deux paramètres
 | C        | 1                  | 8                      | 0.4       |
 | D        | 4                  | 5                      | ?         |
 
-> 🔎 On ajoute une colonne de `1` dans la matrice des données pour intégrer le **biais** `b`.
+
 
 ---
 
@@ -57,7 +57,7 @@ theta = (Xᵗ * X)^(-1) * Xᵗ * y
 | 1     | 3          | 7            |
 | 1     | 1          | 8            |
 
-
+> 🔎 On ajoute une colonne de `1` dans la matrice des données pour intégrer le **biais** `b`.
 
 ### Vecteur y
 | Étudiant | Score (y) |
