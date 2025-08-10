@@ -148,17 +148,10 @@ Probabilité de réussite de l’étudiant D : ~59.87 %
 
 ## 💬 Et vous ?
 
-Quelles autres variables pourraient influencer la réussite d’un étudiant ?
+Plusieurs variables pourraient influencer la réussite d’un étudiant : le niveau de stress, la motivation personnelle, la qualité de l’alimentation ou encore l’environnement familial.
 
-Le niveau de stress ?
+💡 Pourquoi ne pas intégrer ces paramètres dans un futur modèle d’analyse ?
 
-La motivation personnelle ?
-
-La qualité de l’alimentation ?
-
-L’environnement familial ?
-
-💡 Et si vous intégriez ces paramètres dans un futur modèle ?
 
 ### 👨‍🔬 Projet réalisé par
 
