@@ -156,7 +156,8 @@ Plusieurs variables pourraient influencer la réussite d’un étudiant : le niv
 ### 👨‍🔬 Projet réalisé par
 
 Franck KOUEKAM — Autodidacte en IA & vulgarisateur
-Chaîne YouTube : DIAP ∀ — Démystifier l’IA & Python pour tout le monde
+
+DIAP ∀ — Démystifier l’IA & Python pour tout le monde
 
 
 
