@@ -124,6 +124,7 @@ Formule de sortie du neurone :
 z = a1 * x1 + a2 * x2 + b
 
 Puis, on applique une fonction d’activation.
+
 Fonction sigmoïde :
 
 σ(z) = 1 / (1 + e^(-z))
